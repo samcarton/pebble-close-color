@@ -4,47 +4,51 @@
 <title>Pebble Closest Color</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
 <link type="text/css" rel="stylesheet" href="css/pcc.css"/>
+<link type="text/css" rel="stylesheet" href="css/test.css"/>
 </head>
 <body>
 
-<div class ="outer">
-<div class="middle">
-<div class="inner">
-<div class="card-panel" >
-<table>
-<tr>
-<th>In</th>
-<th>Out</th>
-</tr>
-
-<tr>
-<td><div id="inputcolor" style="height:100%; width:100%; background-color:#ff5500; position:relative; display:inline-block;"></div></td>
-<td><div id="outputcolor" style="height:100%; width:100%; background-color:#ff5500; position:relative; display:inline-block;"></div></td>
-</tr>
-<tr>
-<td><input type="text" id="inputtext" value="" placeholder="#ff5500"></td>
-<td><input type="text" id="outputtext" value="" placeholder="#ff5500" readonly></td>
-</tr>
-
-<tr>
-<td>
-<a class="waves-effect waves-light btn" href="javascript:computeClosestColor()">Pebble Color Me!</a>
-</td>
-<td>
-<input type="text" id="colorName" value="Color Name" readonly="">
-</td>
-</tr>
-
-<tr height="22.5px">
-<td colspan="2" align="center" style="padding-top:0px;padding-bottom:0px;height=22.5px;">
-<div id="errortext" style="color:#EE2222"></div>
-</td>
-</tr>
-
-</table>
+<div class="row" style="height:100%;margin-bottom:0;">
+	<div id="inputcolor" class="col s6" style="height:100%;background-color:#ff5500;">
+	</div>
+	<div id="outputcolor" class="col s6" style="height:100%;background-color:#0aa;">		
+	</div>	
 </div>
-</div>
-</div>
+<div style="position:absolute;top:30%;right:50%;">
+	<div style="position:relative;right:-50%;padding:1em 2em 1em 2em;min-width:280px;" class="card">
+		
+		<table>
+
+			<tr>
+				<th colspan="2">Pebble Closest Color Picker</th>
+			</tr>
+
+			<tr>
+				<td><input type="text" id="inputtext" value="" placeholder="#ff5500 (In)"></td>
+				<td><input type="text" id="outputtext" value="" placeholder="#ff5500 (Out)" readonly></td>
+			</tr>
+
+			<tr>
+				<td>
+					<a class="waves-effect waves-light btn" href="javascript:computeClosestColor()">Closest</a>
+				</td>
+				<td>
+					<input type="text" id="colorName" value="Color Name" readonly="">
+				</td>
+			</tr>
+
+			<tr height="22.5px">
+				<td  style="padding-top:0px;padding-bottom:0px;height=22.5px;">
+					<div id="errortext" style="color:#EE2222"></div>
+				</td>
+				<td style="padding-top:0px;padding-bottom:0px;height=22.5px;">
+					<a href="http://developer.getpebble.com/more/color-picker/">Color Picker</a>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
 </div>
 
 <script type="text/javascript" src="js/pcc.js"></script>
