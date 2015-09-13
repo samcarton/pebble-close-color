@@ -1,5 +1,6 @@
 
 var hash = "#";
+var colorPickerBaseUrl = "http://developer.getpebble.com/more/color-picker/";
 
 function computeClosestColor() {
     var inputcolor = document.getElementById("inputcolor");    
@@ -7,6 +8,7 @@ function computeClosestColor() {
     var inputtext = document.getElementById("inputtext");
     var errortext = document.getElementById("errortext");
     var colorName = document.getElementById("colorName");
+    var colorPickerLink = document.getElementById("colorPickerLink");
 
 
 
@@ -32,7 +34,7 @@ function computeClosestColor() {
     outputcolor.style.backgroundColor = outcolor;
     outputtext.value = outcolor;
     colorName.value = getName(outcolor.toUpperCase());
-
+    colorPickerLink.href = colorPickerBaseUrl.concat(outcolor.toUpperCase());
 }
 
 function pebbleColor(inColor)
